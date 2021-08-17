@@ -1,0 +1,28 @@
+use QLSV;
+
+CREATE TABLE LSH (
+	ID_Lop INT,
+	NameLSH VARCHAR(50),
+	CONSTRAINT PK_LSH PRIMARY KEY (ID_Lop)
+);
+create table SV (
+	MSSV VARCHAR(50),
+	NameSV VARCHAR(50),
+	Gender BIT,
+	NS DATE,
+	ID_Lop INT,
+	CONSTRAINT PK_SV PRIMARY KEY (MSSV),
+	CONSTRAINT FK_SV_LSH FOREIGN KEY (ID_Lop) REFERENCES LSH(ID_Lop)
+);
+drop table sv
+INSERT LSH VALUES (
+	1, 'LOP 1'
+),
+(2, 'LOP 2');
+
+INSERT SV VALUES 
+(1, 'NVA', 0, '2008-11-12', 1),
+(2, 'NVB', 1, '2008-11-13', 2),
+(3, 'NVC', 0, '2008-11-14', 1),
+(4, 'NVD', 1, '2008-11-15', 2),
+(5, 'NVE', 0, '2008-11-16', 1);
