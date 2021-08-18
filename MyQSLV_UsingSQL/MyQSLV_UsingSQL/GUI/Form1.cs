@@ -59,7 +59,6 @@ namespace MyQSLV_UsingSQL
             string namesv = txtsearch.Text;
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = QLSV_BLL.Instane.getAllSV_BLL(id_lop, namesv);
-            dataGridView1.Columns[0].Visible = false;
             dataGridView1.Rows[0].Selected = false;
         }
 
@@ -106,6 +105,31 @@ namespace MyQSLV_UsingSQL
                 return false;
             }
             return true;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (!isRowSelected()) return;
+            string MSSV = dataGridView1.CurrentRow.Cells["MSSV"].Value.ToString();
+            if (QLSV_BLL.Instane.deleteSV_BLL(MSSV) != 0)
+                MessageBox.Show("Xoa thanh cong", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+               MessageBox.Show("Xoa that bai", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            refreshData();
+        }
+
+        private void btnsort_Click(object sender, EventArgs e)
+        {
+            string prop = ((CBBItem)cbbsort.SelectedItem).Text;
+            List<string> listMSSV = new List<string>();
+            foreach (DataGridViewRow dgr in dataGridView1.Rows)
+            {
+                if (dgr.Cells["MSSV"].Value == null) break;
+                else listMSSV.Add(dgr.Cells["MSSV"].Value.ToString());
+            }
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = 
+                QLSV_BLL.Instane.sortSVBy_BLL(QLSV_BLL.Instane.getListSV_BLL(listMSSV), prop);
         }
     }
 }

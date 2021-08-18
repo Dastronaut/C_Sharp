@@ -66,14 +66,7 @@ namespace MyQSLV_UsingSQL
 
         private bool isSVExisted(string newmssv)
         {
-            foreach (var i in QLSV_BLL.Instane.getAllSV_BLL(0, ""))
-            {
-                if (i.MSSV == newmssv)
-                {
-                    return true;
-                }
-            }
-            return false;
+            return QLSV_BLL.Instane.isSVExisted(newmssv);
         }
         private void btnok_Click(object sender, EventArgs e)
         {

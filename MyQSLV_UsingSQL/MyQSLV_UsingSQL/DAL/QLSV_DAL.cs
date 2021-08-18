@@ -86,6 +86,11 @@ namespace MyQSLV_UsingSQL
             lsh.NameLop = dr["NameLSH"].ToString();
             return lsh;
         }
+        public string getNameLop_DAL(int id_lop)
+        {
+            string query = "SELECT NameLSH FROM LSH WHERE ID_Lop = " + id_lop;
+            return DBHelper.Instance.getRecord(query).Rows[0]["NameLSH"].ToString();
+        }
         public List<string> getProps_DAL()
         {
             List<string> props = new List<string>();
@@ -115,6 +120,22 @@ namespace MyQSLV_UsingSQL
         {
             string query = "SELECT * FROM SV WHERE MSSV = '" + mssv + "'";
             return get1SV(DBHelper.Instance.getRecord(query).Rows[0]);
+        }
+        public int deleteSV_DAL(string mssv)
+        {
+            string query = "DELETE FROM SV WHERE MSSV = '" + mssv + "'";
+            Console.WriteLine(query);
+            return DBHelper.Instance.ExcuteDB(query);
+        }
+        public List<SV> getListSV_DAL(List<string> listmssv)
+        {
+            List<SV> svs = new List<SV>();
+            string query = "SELECT * FROM SV WHERE MSSV = ";
+            foreach (var i in listmssv)
+            {
+                svs.Add(get1SV(DBHelper.Instance.getRecord(query + i).Rows[0]));
+            }
+            return svs;
         }
     }
 }

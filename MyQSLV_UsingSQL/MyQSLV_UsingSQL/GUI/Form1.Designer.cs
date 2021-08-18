@@ -104,6 +104,7 @@ namespace MyQSLV_UsingSQL
             this.btnsort.TabIndex = 1;
             this.btnsort.Text = "Sort";
             this.btnsort.UseVisualStyleBackColor = true;
+            this.btnsort.Click += new System.EventHandler(this.btnsort_Click);
             // 
             // btnDelete
             // 
@@ -113,6 +114,7 @@ namespace MyQSLV_UsingSQL
             this.btnDelete.TabIndex = 1;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // cbbsort
             // 
@@ -157,6 +159,7 @@ namespace MyQSLV_UsingSQL
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(20, 35);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(937, 260);

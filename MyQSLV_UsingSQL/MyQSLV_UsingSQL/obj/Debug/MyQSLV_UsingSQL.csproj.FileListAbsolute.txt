@@ -9,3 +9,14 @@ D:\Tran Kim Tien Dat\TestC#\MyQSLV_UsingSQL\MyQSLV_UsingSQL\obj\Debug\MyQSLV_Usi
 D:\Tran Kim Tien Dat\TestC#\MyQSLV_UsingSQL\MyQSLV_UsingSQL\obj\Debug\MyQSLV_UsingSQL.exe
 D:\Tran Kim Tien Dat\TestC#\MyQSLV_UsingSQL\MyQSLV_UsingSQL\obj\Debug\MyQSLV_UsingSQL.pdb
 D:\Tran Kim Tien Dat\TestC#\MyQSLV_UsingSQL\MyQSLV_UsingSQL\obj\Debug\MyQSLV_UsingSQL.Form2.resources
+D:\Tran Kim Tien Dat\TestC#\Own\MyQSLV_UsingSQL\MyQSLV_UsingSQL\bin\Debug\MyQSLV_UsingSQL.exe.config
+D:\Tran Kim Tien Dat\TestC#\Own\MyQSLV_UsingSQL\MyQSLV_UsingSQL\bin\Debug\MyQSLV_UsingSQL.exe
+D:\Tran Kim Tien Dat\TestC#\Own\MyQSLV_UsingSQL\MyQSLV_UsingSQL\bin\Debug\MyQSLV_UsingSQL.pdb
+D:\Tran Kim Tien Dat\TestC#\Own\MyQSLV_UsingSQL\MyQSLV_UsingSQL\obj\Debug\MyQSLV_UsingSQL.csprojAssemblyReference.cache
+D:\Tran Kim Tien Dat\TestC#\Own\MyQSLV_UsingSQL\MyQSLV_UsingSQL\obj\Debug\MyQSLV_UsingSQL.Form1.resources
+D:\Tran Kim Tien Dat\TestC#\Own\MyQSLV_UsingSQL\MyQSLV_UsingSQL\obj\Debug\MyQSLV_UsingSQL.Form2.resources
+D:\Tran Kim Tien Dat\TestC#\Own\MyQSLV_UsingSQL\MyQSLV_UsingSQL\obj\Debug\MyQSLV_UsingSQL.Properties.Resources.resources
+D:\Tran Kim Tien Dat\TestC#\Own\MyQSLV_UsingSQL\MyQSLV_UsingSQL\obj\Debug\MyQSLV_UsingSQL.csproj.GenerateResource.cache
+D:\Tran Kim Tien Dat\TestC#\Own\MyQSLV_UsingSQL\MyQSLV_UsingSQL\obj\Debug\MyQSLV_UsingSQL.csproj.CoreCompileInputs.cache
+D:\Tran Kim Tien Dat\TestC#\Own\MyQSLV_UsingSQL\MyQSLV_UsingSQL\obj\Debug\MyQSLV_UsingSQL.exe
+D:\Tran Kim Tien Dat\TestC#\Own\MyQSLV_UsingSQL\MyQSLV_UsingSQL\obj\Debug\MyQSLV_UsingSQL.pdb

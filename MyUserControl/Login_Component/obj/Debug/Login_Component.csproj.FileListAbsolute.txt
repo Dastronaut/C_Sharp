@@ -1,0 +1,7 @@
+D:\Tran Kim Tien Dat\TestC#\Own\MyUserControl\Login_Component\bin\Debug\Login_Component.dll
+D:\Tran Kim Tien Dat\TestC#\Own\MyUserControl\Login_Component\bin\Debug\Login_Component.pdb
+D:\Tran Kim Tien Dat\TestC#\Own\MyUserControl\Login_Component\obj\Debug\Login_Component.Login.resources
+D:\Tran Kim Tien Dat\TestC#\Own\MyUserControl\Login_Component\obj\Debug\Login_Component.csproj.GenerateResource.cache
+D:\Tran Kim Tien Dat\TestC#\Own\MyUserControl\Login_Component\obj\Debug\Login_Component.csproj.CoreCompileInputs.cache
+D:\Tran Kim Tien Dat\TestC#\Own\MyUserControl\Login_Component\obj\Debug\Login_Component.dll
+D:\Tran Kim Tien Dat\TestC#\Own\MyUserControl\Login_Component\obj\Debug\Login_Component.pdb
