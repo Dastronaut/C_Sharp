@@ -110,7 +110,7 @@ namespace MyQSLV_UsingSQL
                 case "NS":
                     cmp = SV.cmpNS;
                     break;
-                case "ID_Lop":
+                case "NameLop":
                     cmp = SV.cmpID_Lop;
                     break;
                 default:

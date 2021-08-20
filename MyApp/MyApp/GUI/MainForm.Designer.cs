@@ -29,37 +29,28 @@ namespace MyApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.grboxChiTiet = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.grboxDS = new System.Windows.Forms.GroupBox();
-            this.grboxSearch = new System.Windows.Forms.GroupBox();
-            this.grboxbutton = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnadd = new System.Windows.Forms.Button();
-            this.btnedit = new System.Windows.Forms.Button();
+            this.grboxSearch = new System.Windows.Forms.GroupBox();
+            this.cbbloaisp = new System.Windows.Forms.ComboBox();
+            this.txttensp = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.grboxbutton = new System.Windows.Forms.GroupBox();
+            this.cbbsort = new System.Windows.Forms.ComboBox();
+            this.btnsort = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
-            this.btnexit = new System.Windows.Forms.Button();
-            this.btnsearch = new System.Windows.Forms.Button();
-            this.btnsave = new System.Windows.Forms.Button();
-            this.btncancel = new System.Windows.Forms.Button();
-            this.grboxChiTiet.SuspendLayout();
+            this.btnedit = new System.Windows.Forms.Button();
+            this.btnrefresh = new System.Windows.Forms.Button();
+            this.btnadd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.grboxDS.SuspendLayout();
-            this.grboxbutton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.grboxSearch.SuspendLayout();
+            this.grboxbutton.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // grboxChiTiet
-            // 
-            this.grboxChiTiet.Controls.Add(this.btncancel);
-            this.grboxChiTiet.Controls.Add(this.btnsave);
-            this.grboxChiTiet.Location = new System.Drawing.Point(430, 93);
-            this.grboxChiTiet.Name = "grboxChiTiet";
-            this.grboxChiTiet.Size = new System.Drawing.Size(499, 480);
-            this.grboxChiTiet.TabIndex = 0;
-            this.grboxChiTiet.TabStop = false;
-            this.grboxChiTiet.Text = "Chi Tiet";
             // 
             // panel1
             // 
@@ -84,26 +75,80 @@ namespace MyApp
             this.grboxDS.Controls.Add(this.dataGridView1);
             this.grboxDS.Location = new System.Drawing.Point(1, 244);
             this.grboxDS.Name = "grboxDS";
-            this.grboxDS.Size = new System.Drawing.Size(423, 329);
+            this.grboxDS.Size = new System.Drawing.Size(928, 329);
             this.grboxDS.TabIndex = 2;
             this.grboxDS.TabStop = false;
             this.grboxDS.Text = "Danh Sach";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 21);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(922, 302);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // grboxSearch
             // 
+            this.grboxSearch.Controls.Add(this.cbbloaisp);
+            this.grboxSearch.Controls.Add(this.txttensp);
+            this.grboxSearch.Controls.Add(this.label3);
+            this.grboxSearch.Controls.Add(this.label2);
             this.grboxSearch.Location = new System.Drawing.Point(6, 93);
             this.grboxSearch.Name = "grboxSearch";
-            this.grboxSearch.Size = new System.Drawing.Size(418, 145);
+            this.grboxSearch.Size = new System.Drawing.Size(923, 145);
             this.grboxSearch.TabIndex = 3;
             this.grboxSearch.TabStop = false;
-            this.grboxSearch.Text = "Search";
+            this.grboxSearch.Text = "Tìm Kiếm";
+            // 
+            // cbbloaisp
+            // 
+            this.cbbloaisp.FormattingEnabled = true;
+            this.cbbloaisp.Location = new System.Drawing.Point(639, 35);
+            this.cbbloaisp.Name = "cbbloaisp";
+            this.cbbloaisp.Size = new System.Drawing.Size(209, 24);
+            this.cbbloaisp.TabIndex = 2;
+            this.cbbloaisp.SelectedIndexChanged += new System.EventHandler(this.cbbloaisp_SelectedIndexChanged);
+            // 
+            // txttensp
+            // 
+            this.txttensp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txttensp.Location = new System.Drawing.Point(88, 33);
+            this.txttensp.Name = "txttensp";
+            this.txttensp.Size = new System.Drawing.Size(269, 24);
+            this.txttensp.TabIndex = 1;
+            this.txttensp.TextChanged += new System.EventHandler(this.txttensp_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Location = new System.Drawing.Point(512, 39);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 18);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Loại SP:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(12, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tên SP:";
             // 
             // grboxbutton
             // 
-            this.grboxbutton.Controls.Add(this.btnexit);
+            this.grboxbutton.Controls.Add(this.cbbsort);
+            this.grboxbutton.Controls.Add(this.btnsort);
             this.grboxbutton.Controls.Add(this.btndelete);
             this.grboxbutton.Controls.Add(this.btnedit);
-            this.grboxbutton.Controls.Add(this.btnsearch);
+            this.grboxbutton.Controls.Add(this.btnrefresh);
             this.grboxbutton.Controls.Add(this.btnadd);
             this.grboxbutton.Location = new System.Drawing.Point(1, 579);
             this.grboxbutton.Name = "grboxbutton";
@@ -111,33 +156,24 @@ namespace MyApp
             this.grboxbutton.TabIndex = 4;
             this.grboxbutton.TabStop = false;
             // 
-            // dataGridView1
+            // cbbsort
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(411, 302);
-            this.dataGridView1.TabIndex = 0;
+            this.cbbsort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbbsort.FormattingEnabled = true;
+            this.cbbsort.Location = new System.Drawing.Point(764, 40);
+            this.cbbsort.Name = "cbbsort";
+            this.cbbsort.Size = new System.Drawing.Size(121, 26);
+            this.cbbsort.TabIndex = 1;
             // 
-            // btnadd
+            // btnsort
             // 
-            this.btnadd.Location = new System.Drawing.Point(164, 32);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(102, 38);
-            this.btnadd.TabIndex = 0;
-            this.btnadd.Text = "Add";
-            this.btnadd.UseVisualStyleBackColor = true;
-            // 
-            // btnedit
-            // 
-            this.btnedit.Location = new System.Drawing.Point(315, 32);
-            this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(102, 38);
-            this.btnedit.TabIndex = 0;
-            this.btnedit.Text = "Edit";
-            this.btnedit.UseVisualStyleBackColor = true;
+            this.btnsort.Location = new System.Drawing.Point(627, 32);
+            this.btnsort.Name = "btnsort";
+            this.btnsort.Size = new System.Drawing.Size(102, 38);
+            this.btnsort.TabIndex = 0;
+            this.btnsort.Text = "Sort";
+            this.btnsort.UseVisualStyleBackColor = true;
+            this.btnsort.Click += new System.EventHandler(this.btnsort_Click);
             // 
             // btndelete
             // 
@@ -147,80 +183,76 @@ namespace MyApp
             this.btndelete.TabIndex = 0;
             this.btndelete.Text = "Delete";
             this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
-            // btnexit
+            // btnedit
             // 
-            this.btnexit.Location = new System.Drawing.Point(627, 32);
-            this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(102, 38);
-            this.btnexit.TabIndex = 0;
-            this.btnexit.Text = "Exit";
-            this.btnexit.UseVisualStyleBackColor = true;
+            this.btnedit.Location = new System.Drawing.Point(315, 32);
+            this.btnedit.Name = "btnedit";
+            this.btnedit.Size = new System.Drawing.Size(102, 38);
+            this.btnedit.TabIndex = 0;
+            this.btnedit.Text = "Edit";
+            this.btnedit.UseVisualStyleBackColor = true;
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
-            // btnsearch
+            // btnrefresh
             // 
-            this.btnsearch.Location = new System.Drawing.Point(20, 32);
-            this.btnsearch.Name = "btnsearch";
-            this.btnsearch.Size = new System.Drawing.Size(102, 38);
-            this.btnsearch.TabIndex = 0;
-            this.btnsearch.Text = "Search";
-            this.btnsearch.UseVisualStyleBackColor = true;
+            this.btnrefresh.Location = new System.Drawing.Point(20, 32);
+            this.btnrefresh.Name = "btnrefresh";
+            this.btnrefresh.Size = new System.Drawing.Size(102, 38);
+            this.btnrefresh.TabIndex = 0;
+            this.btnrefresh.Text = "Refresh";
+            this.btnrefresh.UseVisualStyleBackColor = true;
+            this.btnrefresh.Click += new System.EventHandler(this.btnrefresh_Click);
             // 
-            // btnsave
+            // btnadd
             // 
-            this.btnsave.Location = new System.Drawing.Point(62, 408);
-            this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(102, 38);
-            this.btnsave.TabIndex = 0;
-            this.btnsave.Text = "Save";
-            this.btnsave.UseVisualStyleBackColor = true;
-            // 
-            // btncancel
-            // 
-            this.btncancel.Location = new System.Drawing.Point(312, 408);
-            this.btncancel.Name = "btncancel";
-            this.btncancel.Size = new System.Drawing.Size(102, 38);
-            this.btncancel.TabIndex = 0;
-            this.btncancel.Text = "Cancel";
-            this.btncancel.UseVisualStyleBackColor = true;
+            this.btnadd.Location = new System.Drawing.Point(164, 32);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(102, 38);
+            this.btnadd.TabIndex = 0;
+            this.btnadd.Text = "Add";
+            this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 674);
+            this.ClientSize = new System.Drawing.Size(933, 679);
             this.Controls.Add(this.grboxbutton);
             this.Controls.Add(this.grboxSearch);
             this.Controls.Add(this.grboxDS);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.grboxChiTiet);
             this.Name = "MainForm";
             this.Text = "MainForm";
-            this.grboxChiTiet.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.grboxDS.ResumeLayout(false);
-            this.grboxbutton.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.grboxSearch.ResumeLayout(false);
+            this.grboxSearch.PerformLayout();
+            this.grboxbutton.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox grboxChiTiet;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grboxDS;
         private System.Windows.Forms.GroupBox grboxSearch;
         private System.Windows.Forms.GroupBox grboxbutton;
-        private System.Windows.Forms.Button btncancel;
-        private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnexit;
+        private System.Windows.Forms.Button btnsort;
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button btnedit;
-        private System.Windows.Forms.Button btnsearch;
+        private System.Windows.Forms.Button btnrefresh;
         private System.Windows.Forms.Button btnadd;
+        private System.Windows.Forms.TextBox txttensp;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbbsort;
+        private System.Windows.Forms.ComboBox cbbloaisp;
     }
 }

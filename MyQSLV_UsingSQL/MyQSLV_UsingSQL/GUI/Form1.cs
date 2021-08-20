@@ -40,16 +40,20 @@ namespace MyQSLV_UsingSQL
 
         private void setCBBSort()
         {
-            int i = 0;
-            foreach (string s in QLSV_BLL.Instane.getProps_BLL())
+            List<string> listprop = QLSV_BLL.Instane.getProps_BLL();
+            for (int i = 0; i < listprop.Count - 1; i++)
             {
                 cbbsort.Items.Add(new CBBItem
                 {
-                    Text = s,
+                    Text = listprop[i],
                     Value = i
                 });
-                i++;
             }
+            cbbsort.Items.Add(new CBBItem
+            {
+                Text = "NameLop",
+                Value = listprop.Count - 1,
+            });
             cbbsort.SelectedIndex = 0;
         }
 
