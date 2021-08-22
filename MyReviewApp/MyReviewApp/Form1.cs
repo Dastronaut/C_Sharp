@@ -15,6 +15,8 @@ namespace MyReviewApp
         public Form1()
         {
             InitializeComponent();
+            CSDL db = new CSDL();
+            dataGridView1.DataSource = db.SPs.ToList();
         }
     }
 }
